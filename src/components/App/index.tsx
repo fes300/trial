@@ -1,13 +1,16 @@
 import * as React from "react";
 
-export interface AppProps { compiler: string; framework: string; }
+interface AppProps { count: number; increase: (_event: any) => void; }
 
-// 'AppProps' describes the shape of props.
-// State is never set so we use the '{}' type.
 export class App extends React.Component<AppProps, {}> {
   render() {
+    const { count, increase } = this.props
+
     return (
-      <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>
+      <React.Fragment>
+        <h1>Hello the count is {count}</h1>
+        <button onClick={increase}>+1</button>
+      </React.Fragment>      
     );
   }
 }
