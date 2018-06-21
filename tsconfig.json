@@ -12,6 +12,7 @@
     "noImplicitAny": true,
     "target": "es5",
     "jsx": "react",
-    "allowJs": false
+    "allowJs": false,
+    "strict": true
   }
 }
